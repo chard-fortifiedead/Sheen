@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sheen ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="floating-heart">❤️</div>
+        <div class="floating-heart" style="left: 10%; animation-delay: 2s;">💖</div>
+        <div class="floating-heart" style="left: 80%; animation-delay: 4s;">✨</div>
+    </div>
+
+    <main class="container">
+        <!-- Section 1: Intro -->
+        <section id="intro" class="screen active">
+            <h1 class="title">Hey Sheen...</h1>
+            <p class="subtitle">I made something small for you.</p>
+            <div class="music-control">
+                <button id="musicBtn" class="btn-primary" onclick="toggleMusic()">🎵 Play Music</button>
+            </div>
+            <button class="btn-primary" onclick="nextScreen('letter')">See What it is</button>
+        </section>
+
+        <!-- Audio Element -->
+        <audio id="bgMusic" loop>
+            <source src="from the start — laufey.mp3">
+        </audio>
+        <!-- Section 2: Letter/Poem -->
+        <section id="letter" class="screen hidden">
+            <!-- <h2 class="section-title">A Letter For You</h2> -->
+            <div class="letter-paper">
+                <p class="letter-salutation">Dear Sheen,</p>
+                <div class="letter-body">
+                    <p>I like you, I really do. From when I laid my eyes on you when you arrived, I knew I fell for you,
+                        and trust me I did a good job hiding it, but I can't anymore. Cause I'd rather take the risk
+                        than let it all go.</p>
+                    <p>I like you Sheen, I like you a lot. And I know its crazy as it sounds but that's the truth,
+                        trust. I know I am far too away from your standards, even though I don't know them. But at least
+                        I can at least be a guy, who's becoming a man.</p>
+                    <p>I don't know how to dress, nor how to impress. I just act like how I am, but with you I am
+                        speechless. Though yes I talk and tease, its just to hide what I feel. Cause I'm scared that if
+                        I didn't, they'd laugh at me through their heels. I like you Sheen, more than words can express.
+                        I may never look like it but I'm just too scared to confess. And a friend said I should, be
+                        brave and face it. But I can't tell you directly, so this letter is my way of saying.</p>
+                    <p>Not every word can rhyme, not every poem can be understood. So maybe make it simple, and make it
+                        sound mature. But there's more to what I feel, that even words can't comprehend, and I can't
+                        show you clearly, cause well that'd create a trend. A bad one.</p>
+                    <p>So this letter I give you, isn't just a love letter. Its a love poem, though I figured you won't
+                        even begin to differ. But you just reading this makes me happy, more than happy that's the
+                        truth. So the next question is something, I took a week to conclude.</p>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="nextScreen('confession')">Sheen...</button>
+        </section>
+
+        <!-- Section 3: Confession -->
+        <section id="confession" class="screen hidden">
+            <h2 class="question">Will you be my Valentine?</h2>
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3R6eW50dGhtc3R5eWJ5eWJ5eWJ5eWJ5eWJ5eWJ5eWJ5eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif"
+                    alt="Cute Bear" class="cute-gif">
+            </div>
+            <div class="buttons">
+                <button class="btn-yes" onclick="celebrate()">Yes!</button>
+                <button class="btn-no" id="noButton" onmouseover="moveButton()">No</button>
+            </div>
+        </section>
+
+        <!-- Success/Celebration Screen -->
+        <section id="success" class="screen hidden">
+            <h1 class="title">Yay! 💖</h1>
+            <p class="subtitle">I Can't wait!</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
